@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            <!--Table to capture username and password-->
+            <table class="table table-bordered">
+                <thead>
+                <tr class="success">
+                    <th colspan="2">
+                        Existing User Login
+                        <a href="/Register.html" class="btn btn-success pull-right">
+                            Register
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Usename</td>
+                    <td>
+                        <input type="text" id="username" placeholder="Enter Username" name="username"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" id="password" placeholder="Enter Password" name="password"/>
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td colspan="2">
+                        <input id="btnLogin" class="btn btn-success" type="submit"
+                               value="Login"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!--Bootstrap alert to display error message if the login fails-->
+            <div id="divError" class="alert alert-danger collapse">
+                <a id="linkClose" href="#" class="close">&times;</a>
+                <div id="divErrorText"></div>
+            </div>
+        </div>
+    </div>
+}
+<script src="Scripts/jquery-1.10.2.min.js"></script>
+<script src="Scripts/AccountMembership.js"></script>

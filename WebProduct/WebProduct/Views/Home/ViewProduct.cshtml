@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "View Product";
+}
+
+<h2>View Product</h2>
+
+@using (Html.BeginForm("ListProduct", "Home", FormMethod.Post))
+{
+    <input id="btnLoadEmployees" class="btn btn-success"
+           type="submit" value="Load Employees"/>
+}
