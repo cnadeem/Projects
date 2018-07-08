@@ -1,0 +1,23 @@
+﻿create database ProductDB
+Go
+
+Use ProductDB
+Go
+
+Create table Products
+(
+       ID int primary key identity,
+       ProductName nvarchar(50),
+       ProductDescription nvarchar(50),
+       Price decimal(7,2)
+)
+Go
+
+Insert into Products values ('Product 1','Product Description 1', 500) 
+Insert into Products values ('Product 2','Product Description 2', 400) 
+Insert into Products values ('Product 3','Product Description 3', 300) 
+Insert into Products values ('Product 4','Product Description 4', 800) 
+Insert into Products values ('Product 5','Product Description 5', 400) 
+Go
+
+ 
